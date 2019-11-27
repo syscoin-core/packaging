@@ -46,8 +46,6 @@ parts:
       sha256sum --ignore-missing --check SHA256SUMS.asc
       tar -xvf syscoin-${SNAPCRAFT_PROJECT_VERSION}-${SNAPCRAFT_ARCH_TRIPLET}.tar.gz
       tar -xvf syscoin-${SNAPCRAFT_PROJECT_VERSION}.tar.gz
-      echo "Running tests ..."
-      syscoin-${SNAPCRAFT_PROJECT_VERSION}/bin/test_syscoin
       install -m 0755 -D -t $SNAPCRAFT_PART_INSTALL/bin syscoin-${SNAPCRAFT_PROJECT_VERSION}/bin/syscoind
       install -m 0755 -D -t $SNAPCRAFT_PART_INSTALL/bin syscoin-${SNAPCRAFT_PROJECT_VERSION}/bin/syscoin-qt
       install -m 0755 -D -t $SNAPCRAFT_PART_INSTALL/bin syscoin-${SNAPCRAFT_PROJECT_VERSION}/bin/syscoin-cli
