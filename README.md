@@ -1,10 +1,10 @@
-Bitcoin Core packaging
+Syscoin Core packaging
 =======
 
-Bitcoin Core is packaged and distributed through different channels.
+Syscoin Core is packaged and distributed through different channels.
 
-Advanced users can compile Bitcoin Core from source and static binaries, as well as installers for Windows and macOS are
-provided on the [website](https://bitcoincore.org/en/download/).
+Advanced users can compile Syscoin Core from source and static binaries, as well as installers for Windows and macOS are
+provided on the [website](https://syscoincore.org/en/download/).
 
 In addition, this repository contains packaging metadata for package managers running on Linux. Currently
 

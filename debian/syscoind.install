@@ -1,0 +1,3 @@
+usr/local/bin/syscoind usr/bin
+usr/local/bin/syscoin-cli usr/bin
+debian/examples/syscoin.conf etc/syscoin
