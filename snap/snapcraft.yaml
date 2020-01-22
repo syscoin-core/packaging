@@ -1,5 +1,5 @@
 name: syscoin-core
-version: 4.1.0.0
+version: 4.1.2
 summary:   peer-to-peer network based digital currency
 description: |
   Syscoin is a free open source peer-to-peer electronic cash system that
@@ -39,16 +39,18 @@ parts:
     plugin: nil
     override-build: | 
       env | grep SNAP
-      wget https://syscoincore.org/bin/syscoin-core-${SNAPCRAFT_PROJECT_VERSION}/SHA256SUMS.asc
-      wget https://syscoincore.org/bin/syscoin-core-${SNAPCRAFT_PROJECT_VERSION}/syscoin-${SNAPCRAFT_PROJECT_VERSION}.tar.gz
-      wget https://syscoincore.org/bin/syscoin-core-${SNAPCRAFT_PROJECT_VERSION}/syscoin-${SNAPCRAFT_PROJECT_VERSION}-${SNAPCRAFT_ARCH_TRIPLET}.tar.gz
-      echo "58c6aa349570ffd8137d3a5cd576e83aedcdbe6bdcb2993835b5cd004758f15b  SHA256SUMS.asc" | sha256sum --check
+      wget https://github.com/syscoin/syscoin/releases/download/v${SNAPCRAFT_PROJECT_VERSION}/SHA256SUMS.asc
+      wget https://github.com/syscoin/syscoin/releases/download/v${SNAPCRAFT_PROJECT_VERSION}/syscoin-${SNAPCRAFT_PROJECT_VERSION}.tar.gz
+      wget https://github.com/syscoin/syscoin/releases/download/v${SNAPCRAFT_PROJECT_VERSION}/syscoin-${SNAPCRAFT_PROJECT_VERSION}-${SNAPCRAFT_ARCH_TRIPLET}.tar.gz
+      echo " d880f0df10f407a99f25d16b10942fc9524421828c4f9d2b0884a4355efba176 SHA256SUMS.asc" | sha256sum --check
       sha256sum --ignore-missing --check SHA256SUMS.asc
       tar -xvf syscoin-${SNAPCRAFT_PROJECT_VERSION}-${SNAPCRAFT_ARCH_TRIPLET}.tar.gz
       tar -xvf syscoin-${SNAPCRAFT_PROJECT_VERSION}.tar.gz
       install -m 0755 -D -t $SNAPCRAFT_PART_INSTALL/bin syscoin-${SNAPCRAFT_PROJECT_VERSION}/bin/syscoind
       install -m 0755 -D -t $SNAPCRAFT_PART_INSTALL/bin syscoin-${SNAPCRAFT_PROJECT_VERSION}/bin/syscoin-qt
       install -m 0755 -D -t $SNAPCRAFT_PART_INSTALL/bin syscoin-${SNAPCRAFT_PROJECT_VERSION}/bin/syscoin-cli
+      install -m 0755 -D -t $SNAPCRAFT_PART_INSTALL/bin syscoin-${SNAPCRAFT_PROJECT_VERSION}/bin/sysgeth.nod
+      install -m 0755 -D -t $SNAPCRAFT_PART_INSTALL/bin syscoin-${SNAPCRAFT_PROJECT_VERSION}/bin/sysrelayer.nod
       wget https://raw.githubusercontent.com/syscoin/syscoin/master/share/pixmaps/syscoin128.png
       install -m 0644 -D -t $SNAPCRAFT_PART_INSTALL/share/pixmaps syscoin128.png
     build-packages:
