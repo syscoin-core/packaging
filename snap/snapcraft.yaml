@@ -1,5 +1,5 @@
 name: syscoin-core
-version: 4.1.2
+version: 4.1.2.1
 summary:   peer-to-peer network based digital currency
 description: |
   Syscoin is a free open source peer-to-peer electronic cash system that
@@ -42,7 +42,7 @@ parts:
       wget https://github.com/syscoin/syscoin/releases/download/v${SNAPCRAFT_PROJECT_VERSION}/SHA256SUMS.asc
       wget https://github.com/syscoin/syscoin/releases/download/v${SNAPCRAFT_PROJECT_VERSION}/syscoin-${SNAPCRAFT_PROJECT_VERSION}.tar.gz
       wget https://github.com/syscoin/syscoin/releases/download/v${SNAPCRAFT_PROJECT_VERSION}/syscoin-${SNAPCRAFT_PROJECT_VERSION}-${SNAPCRAFT_ARCH_TRIPLET}.tar.gz
-      echo " d880f0df10f407a99f25d16b10942fc9524421828c4f9d2b0884a4355efba176 SHA256SUMS.asc" | sha256sum --check
+      echo "f20a01814d15168a1139355c206a9922f2cfe4a87939dabdb3f04efba6ab912d SHA256SUMS.asc" | sha256sum --check
       sha256sum --ignore-missing --check SHA256SUMS.asc
       tar -xvf syscoin-${SNAPCRAFT_PROJECT_VERSION}-${SNAPCRAFT_ARCH_TRIPLET}.tar.gz
       tar -xvf syscoin-${SNAPCRAFT_PROJECT_VERSION}.tar.gz
