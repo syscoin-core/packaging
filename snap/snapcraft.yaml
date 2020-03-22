@@ -42,7 +42,7 @@ parts:
       wget https://github.com/syscoin/syscoin/releases/download/v${SNAPCRAFT_PROJECT_VERSION}/SHA256SUMS.asc
       wget https://github.com/syscoin/syscoin/releases/download/v${SNAPCRAFT_PROJECT_VERSION}/syscoin-${SNAPCRAFT_PROJECT_VERSION}.tar.gz
       wget https://github.com/syscoin/syscoin/releases/download/v${SNAPCRAFT_PROJECT_VERSION}/syscoin-${SNAPCRAFT_PROJECT_VERSION}-${SNAPCRAFT_ARCH_TRIPLET}.tar.gz
-      echo "81f2d9f9a82b73bcbc09048b441f045222e4bd1a3ef9816580b9f73f4f341f15 SHA256SUMS.asc" | sha256sum --check
+      echo "56bde5c79737085c52b47dd263a219137576e97047dc3598f5939fd2708f455a SHA256SUMS.asc" | sha256sum --check
       sha256sum --ignore-missing --check SHA256SUMS.asc
       tar -xvf syscoin-${SNAPCRAFT_PROJECT_VERSION}-${SNAPCRAFT_ARCH_TRIPLET}.tar.gz
       tar -xvf syscoin-${SNAPCRAFT_PROJECT_VERSION}.tar.gz
